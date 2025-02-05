@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: springbootconfig
+  labels:
+    app: springbootconfig
+data:
+  DB_HOST: mongo-service
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name:  mongodbsecret
+data:
+  mongodb-username: YWRtaW4=
+  mongodb-password: YWRtaW4xMjM=
+type: Opaque
